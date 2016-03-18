@@ -69,6 +69,12 @@ void wypisztab(){       /*metoda, ktora wypisuje wszystkie elementy tablicy*/
     }
 };
 
+class interfejs{
+public:
+void przygotuj(tabd tab, stoper s) = 0;
+void wykonaj() = 0;
+};
+
 int main(){
 int x=10;
 stoper s;
