@@ -1,0 +1,10 @@
+zad1: main.o tabd.o stoper.o
+	g++ -o main.o tabd.o
+main.o: main.cpp tabd.o
+	g++ -c -o main.o main.cpp
+tabd.o: tabd.cpp tabd.h interfejs.h stoper.h
+	g++ -c -o tabd.o tabd.cpp
+stoper.o: stoper.cpp stoper.h
+	g++ -c -o stoper.o stoper.cpp
+make clean:
+	rm *.o
