@@ -1,4 +1,3 @@
-#include <iostream>
 #ifndef INTERFEJS
 #define INTERFEJS
 class interfejs{

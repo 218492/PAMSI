@@ -2,6 +2,7 @@
 #include <ctime>
 #include "stoper.h"
 #include "tabd.h"
+#include "interfejs.h"
 using namespace std;
 
 int main(){
