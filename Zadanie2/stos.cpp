@@ -1,5 +1,4 @@
 #include <iostream>
-#include <ctime>
 #include "stos.h"
 using namespace std;
 stos::stos(){

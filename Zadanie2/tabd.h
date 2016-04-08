@@ -1,4 +1,3 @@
-#include <iostream>
 #include "stoper.h"
 #ifndef TABD
 #define TABD

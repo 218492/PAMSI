@@ -1,4 +1,3 @@
-#include <iostream>
 #ifndef INTERFEJSSTOSU
 #define INTERFEJSSTOSU
 class interfejsstosu{

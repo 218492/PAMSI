@@ -20,5 +20,4 @@ stosik.rozmiarstsu();
 stosik.pop();
 stosik.rozmiarstsu();
 stosik.pop();
-stosik.rozmiarstsu();
 }

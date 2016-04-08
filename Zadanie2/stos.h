@@ -1,8 +1,5 @@
 #include "tabd.h"
-#include "stoper.h"
 #include "interfejsstosu.h"
-#include <iostream>
-#include <ctime>
 
 class stos: public interfejsstosu, private tabd{
 int rozmiarstosu;
