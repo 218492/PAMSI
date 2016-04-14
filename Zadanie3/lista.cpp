@@ -51,6 +51,7 @@ if (i==(rozmiar_listy-(pozycja+2))){temp2=temp;}
 }
 temp2->nastepny=temp->nastepny;
 rozmiar_listy--;
+delete temp;
 delete temp2;
 return(0);
 }
