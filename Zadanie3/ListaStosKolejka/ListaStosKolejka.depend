@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1460564039 source:/home/matiw51/Documents/PAMSI/Zadanie3/ListaStosKolejka/main.cpp
+	"lista.hh"
+	"interfejs.hh"
+
+1460628070 /home/matiw51/Documents/PAMSI/Zadanie3/ListaStosKolejka/lista.hh
+	"interfejs.hh"
+
+1460627427 /home/matiw51/Documents/PAMSI/Zadanie3/ListaStosKolejka/interfejs.hh
+
