@@ -8,6 +8,7 @@ wezel * nastepny;
 };
 
 class lista: public interfejs, private wezel{
+friend class kolejka;
 int rozmiar_listy;
 wezel *przod;
 wezel *tyl;
@@ -15,7 +16,11 @@ public:
 lista();
 virtual void dodajelement(int element, int pozycja);
 virtual int usunelement(int pozycja);
-virtual void wyswietl();
+virtual int wyswietlelement(int pozycja);
 virtual void wyswietlrozmiar();
+virtual void wyjmijelement(int pozycja);
+virtual void wyswietl();
+virtual void wypelnij(int ilosc);
+virtual void przeszukajizmierz(int pozycja);
 };
 #endif

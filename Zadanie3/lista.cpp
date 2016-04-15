@@ -1,4 +1,5 @@
 #include "lista.hh"
+#include "stoper.h"
 #include "iostream"
 using namespace std;
 void lista::dodajelement(int elem, int pozycja){
@@ -16,42 +17,43 @@ temp->nastepny=NULL;
 tyl=temp;
 }
 }
-if(pozycja==rozmiar_listy && rozmiar_listy!=0){/*dodawanie na przod*/
+else if(pozycja==rozmiar_listy && rozmiar_listy!=0){/*dodawanie na przod*/
 temp->nastepny=przod;
 przod=temp;
 }
 else if(pozycja<rozmiar_listy){
 wezel *temp2=new wezel;
+wezel *temp3=new wezel;
 temp2=przod;
-for(int i=0;i<(rozmiar_listy-(pozycja+1));i++){
+for(int i=0;i<(rozmiar_listy-(pozycja+2));i++){ /*pozycja +2, bo szukamy wezla poprzedzajcego*/
+cout << "3.1" << endl;
 temp2=temp2->nastepny;
 }
-temp->nastepny=temp2->nastepny;
-delete temp2;
+temp3=temp2->nastepny;
+temp2->nastepny=temp;
+temp->nastepny=temp3->nastepny;
 }
 else{
 cout << "Poza zakresem" << endl;
 rozmiar_listy--;
 }
 rozmiar_listy++;
-delete temp;
 }
 
-int lista::usunelement(int pozycja){
+int lista::usunelement(int pozycja){        /*usuwa element*/
 if(pozycja>=rozmiar_listy){
 cout << "Element nie istnieje." << endl;
-return(0);
+return(1);
 }
 wezel *temp;
 wezel *temp2;
 temp=przod;
-for(int i=0;i<(rozmiar_listy-(pozycja+1)); i++){
+for(int i=0;i<(rozmiar_listy-(pozycja+2)); i++){
 temp=temp->nastepny;
-if (i==(rozmiar_listy-(pozycja+2))){temp2=temp;}
 }
-temp2->nastepny=temp->nastepny;
+temp2=temp;
+temp->nastepny=temp2->nastepny;
 rozmiar_listy--;
-delete temp;
 delete temp2;
 return(0);
 }
@@ -66,6 +68,39 @@ void lista::wyswietlrozmiar(){
 cout << rozmiar_listy << endl;
 };
 
-void lista::wyswietl(){
+int lista::wyswietlelement(int pozycja){
+if(pozycja>=rozmiar_listy){
+cout << "Element nie istnieje." << endl;
+return(1);
+}
+wezel *temp;
+temp=przod;
+for(int i=0;i<(rozmiar_listy-(pozycja+1)); i++){
+temp=temp->nastepny;
+}
+cout << "Element na pozycji "<< pozycja << " ma wartosc " << temp->element << endl;
+return(0);
+}
 
-};
+void lista::wyswietl(){
+for(int i=0; i<(rozmiar_listy); i++){
+wyswietlelement(i);}
+}
+
+void lista::wyjmijelement(int pozycja){
+if (wyswietlelement(pozycja)!=1){
+usunelement(pozycja);}
+}
+
+void lista::wypelnij(int ilosc){
+for(int i=0; i<ilosc; i++){
+dodajelement(0, 0);
+}
+}
+
+void lista::przeszukajizmierz(int pozycja){
+stoper s;
+s.start();
+wyswietlelement(pozycja);
+s.stop();
+}

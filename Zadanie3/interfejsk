@@ -1,8 +1,8 @@
-#ifndef interfejs_hh
-#define interfejs_hh
+#ifndef interfejsk_hh
+#define interfejsk_hh
 class interfejs {
 public:
-virtual void dodajelement(int, int)=0;
+virtual void dodajelement(int)=0;
 virtual int usunelement(int)=0;
 virtual void wyjmijelement(int)=0;
 virtual void wyswietlrozmiar()=0;
