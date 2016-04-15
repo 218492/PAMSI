@@ -16,7 +16,7 @@ void kolejka::wyswietlrozmiar(){
 l.wyswietlrozmiar();
 }
 void kolejka::wyjmijelement(){
-l.wyjmijelement(l.rozmiar_listy);
+l.wyjmijelement(l.rozmiar_listy-1);
 }
 void kolejka::wyswietl(){
 l.wyswietl();

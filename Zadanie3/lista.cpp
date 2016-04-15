@@ -51,7 +51,13 @@ temp=przod;
 for(int i=0;i<(rozmiar_listy-(pozycja+2)); i++){
 temp=temp->nastepny;
 }
-temp2=temp;
+if(pozycja==rozmiar_listy-1){
+przod=temp->nastepny;
+rozmiar_listy--;
+delete temp;
+return(0);
+}
+temp2=temp->nastepny;
 temp->nastepny=temp2->nastepny;
 rozmiar_listy--;
 delete temp2;
