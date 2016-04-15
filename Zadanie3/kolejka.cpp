@@ -4,8 +4,7 @@ void kolejka::dodajelement(int element){
 l.dodajelement(element, 0);
 }
 int kolejka::usunelement(){
-l.usunelement(l.rozmiar_listy-1);
-return(0);
+return(l.usunelement(l.rozmiar_listy-1));
 }
 
 int kolejka::wyswietlelement(int pozycja){
@@ -15,8 +14,8 @@ return(0);
 void kolejka::wyswietlrozmiar(){
 l.wyswietlrozmiar();
 }
-void kolejka::wyjmijelement(){
-l.wyjmijelement(l.rozmiar_listy-1);
+int kolejka::wyjmijelement(){
+return(l.wyjmijelement(l.rozmiar_listy-1));
 }
 void kolejka::wyswietl(){
 l.wyswietl();

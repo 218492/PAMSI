@@ -18,7 +18,7 @@ virtual void dodajelement(int element, int pozycja);
 virtual int usunelement(int pozycja);
 virtual int wyswietlelement(int pozycja);
 virtual void wyswietlrozmiar();
-virtual void wyjmijelement(int pozycja);
+virtual int wyjmijelement(int pozycja);
 virtual void wyswietl();
 virtual void wypelnij(int ilosc);
 virtual void przeszukajizmierz(int pozycja);

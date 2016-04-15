@@ -4,7 +4,7 @@ class interfejs {
 public:
 virtual void dodajelement(int, int)=0;
 virtual int usunelement(int)=0;
-virtual void wyjmijelement(int)=0;
+virtual int wyjmijelement(int)=0;
 virtual void wyswietlrozmiar()=0;
 virtual int wyswietlelement(int)=0;
 virtual void wyswietl()=0;

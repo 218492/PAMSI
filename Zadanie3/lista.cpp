@@ -54,14 +54,13 @@ temp=temp->nastepny;
 if(pozycja==rozmiar_listy-1){
 przod=temp->nastepny;
 rozmiar_listy--;
-delete temp;
-return(0);
+return(temp->element);
 }
 temp2=temp->nastepny;
 temp->nastepny=temp2->nastepny;
 rozmiar_listy--;
 delete temp2;
-return(0);
+return(temp2->element);
 }
 
 lista::lista(){
@@ -93,9 +92,10 @@ for(int i=0; i<(rozmiar_listy); i++){
 wyswietlelement(i);}
 }
 
-void lista::wyjmijelement(int pozycja){
+int lista::wyjmijelement(int pozycja){
 if (wyswietlelement(pozycja)!=1){
-usunelement(pozycja);}
+return(usunelement(pozycja));}
+return(0);
 }
 
 void lista::wypelnij(int ilosc){
