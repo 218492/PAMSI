@@ -4,16 +4,18 @@
 #include "stos.h"
 using namespace std;
 int main(){
-lista L;
+lista L, L2, L3, L4, L5;
 L.wypelnij(10);
 L.przeszukajizmierz(0);
-L.wypelnij(100);
-L.przeszukajizmierz(0);
-L.wypelnij(1000);
-L.przeszukajizmierz(0);
-L.wypelnij(1000000);
-L.przeszukajizmierz(0);
-cout << endl << endl << endl;
+L2.wypelnij(100);
+L2.przeszukajizmierz(0);
+L3.wypelnij(1000);
+L3.przeszukajizmierz(0);
+L4.wypelnij(1000000);
+L4.przeszukajizmierz(0);
+L5.wypelnij(100000000);
+L5.przeszukajizmierz(0);
+/*cout << endl << endl << endl;
 kolejka k;
 k.dodajelement(5);
 k.dodajelement(1);
@@ -34,5 +36,5 @@ L2.dodajelement(0,0);
 L2.wyswietl();
 L2.usunelement(9);
 cout << endl;
-L2.wyswietl();
+L2.wyswietl();*/
 }
