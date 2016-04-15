@@ -9,6 +9,7 @@ wezel * nastepny;
 
 class lista: public interfejs, private wezel{
 friend class kolejka;
+friend class stos;
 int rozmiar_listy;
 wezel *przod;
 wezel *tyl;

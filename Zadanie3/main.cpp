@@ -1,6 +1,7 @@
 #include "lista.hh"
 #include "iostream"
 #include "kolejka.hh"
+#include "stos.h"
 using namespace std;
 int main(){
 lista L;
