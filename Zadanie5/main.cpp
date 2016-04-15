@@ -1,3 +1,7 @@
 #include "tabd.h"
 #include "lista.h"
-int main(){}
+int main(){
+tabd k;
+
+
+}

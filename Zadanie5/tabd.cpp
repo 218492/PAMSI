@@ -1,4 +1,5 @@
 #include "tabd.h"
+#include "lista.h"
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -31,10 +32,17 @@ tabd::tabd(){             /*konstruktor*/
     rozmiar=10;             /*przyjmujemy rozmiar rowny 10*/
     w1=new int[rozmiar];    /*alokujemy pamiec*/
     }
+
 tabd::~tabd(){      /*destruktor*/
     delete[] w1;
     w1=NULL;
     }
+
+void tabd::tablicalist(){
+    rozmiar=10;
+    wl1=new lista[rozmiar];
+}
+
 void tabd::wypelnijtab1(int ilosc, int j){     /*metoda pozwalajaca na wypelnienie tablicy numerem indeksu +1, w ktorej zastosowalem taktyka powiekszenia o stala*/
     for(int i=0; i<ilosc; i++){
         if(rozmiar>i) {
@@ -57,6 +65,8 @@ void tabd::wypelnijtab2(int ilosc){           /*metoda pozwalajaca na wypelnieni
     }
     }
     }
+
+
 void tabd::wypisztab(){       /*metoda, ktora wypisuje wszystkie elementy tablicy*/
     for(int i=0; i<rozmiar; i++){
     cout<<w1[i]<<'\t';
