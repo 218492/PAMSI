@@ -1,5 +1,5 @@
 # PAMSI
-Mam duże zaległości. Postaram się je jak najszybciej wyrównać. Powodem jest tylko trudność ogarnięcia kolejnych zadań i chwilowe poddanie się. Mam nadzieję, że opóźnienia nie przeszkodzą w zaliczeniu kursu.
+Mam duże zaległości. Postaram się je jak najszybciej wyrównać. Powodem jest tylko trudność ogarnięcia kolejnych zadań i chwilowe poddanie się.
 
 Pierwsze laborki są w zasadzie luzem w folderze PAMSI.  
 Zadanie 1 to drugie laborki. W sumie to są uporządkowane pierwsze laborki wzbogacone o interfejs.  
