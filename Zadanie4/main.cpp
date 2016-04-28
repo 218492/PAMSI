@@ -5,7 +5,6 @@
 #include "sort2.hpp"
 #include "node.hpp"
 #include "list.hpp"
-#include "stack.hpp"
 #include "queue.hpp"
 #include "stoper.hpp"
 
