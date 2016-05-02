@@ -1,8 +1,0 @@
-#ifndef INTERFEJSS
-
-class interfejs {
-public:
-virtual void dodajelement()=0;
-virtual void usunelement()=0;
-};
-

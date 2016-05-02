@@ -1,10 +1,13 @@
-zad1: main.o tabd.o stoper.o
-	g++ -o main.o tabd.o
-main.o: main.cpp tabd.o
-	g++ -c -o main.o main.cpp
-tabd.o: tabd.cpp tabd.h interfejs.h stoper.h
-	g++ -c -o tabd.o tabd.cpp
-stoper.o: stoper.cpp stoper.h
-	g++ -c -o stoper.o stoper.cpp
+CPPFLAGS= -c -std=c++11 -Wall -pedantic
+
+zad1: obj/main.o obj/tabd.o obj/stoper.o
+	g++ -std=c++11 -Wall -pedantic -o zad1 obj/main.o obj/tabd.o obj/stoper.o
+obj/main.o: src/main.cpp inc/interfejs.h inc/stoper.h inc/tabd.h
+	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
+obj/tabd.o: src/tabd.cpp inc/tabd.h inc/stoper.h
+	g++ ${CPPFLAGS} -o obj/tabd.o src/tabd.cpp
+obj/stoper.o: src/stoper.cpp inc/stoper.h
+	g++ ${CPPFLAGS} -o obj/stoper.o src/stoper.cpp
 make clean:
-	rm *.o
+	rm obj/*.o zad1
+
