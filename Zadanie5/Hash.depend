@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1463091280 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/lista.cpp
+	"lista.h"
+	"stoper.h"
+	"iostream"
+
+1463091065 /home/matiw51/Documents/PAMSI/Zadanie5/inc/lista.h
+	"interfejsl.h"
+	<string>
+
+1463087908 /home/matiw51/Documents/PAMSI/Zadanie5/inc/interfejsl.h
+	<string>
+
+1462231872 /home/matiw51/Documents/PAMSI/Zadanie5/inc/stoper.h
+	<ctime>
+
+1463091317 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/main.cpp
+	"lista.h"
+	"hasz.h"
+	<iostream>
+
+1462474076 /home/matiw51/Documents/PAMSI/Zadanie5/inc/tabd.h
+	"interfejst.h"
+	"stoper.h"
+	"lista.h"
+
+1462231872 /home/matiw51/Documents/PAMSI/Zadanie5/inc/interfejst.h
+
+1462231872 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/stoper.cpp
+	"stoper.h"
+	<iostream>
+	<ctime>
+
+1462474063 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/tabd.cpp
+	"tabd.h"
+	"lista.h"
+	<iostream>
+	<ctime>
+
+1463091155 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/hasz.cpp
+	"hasz.h"
+	<string>
+	<iostream>
+
+1463091155 /home/matiw51/Documents/PAMSI/Zadanie5/inc/hasz.h
+	"lista.h"
+	<string>
+
