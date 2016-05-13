@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1463125892 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/lista.cpp
+	"lista.hh"
+	"iostream"
+
+1463125846 /home/matiw51/Documents/PAMSI/Zadanie7/inc/lista.hh
+	"interfejs.hh"
+
+1463125892 /home/matiw51/Documents/PAMSI/Zadanie7/inc/interfejs.hh
+
+1463124422 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/main.cpp
+	"graf.hh"
+	"iostream"
+
+1463123511 /home/matiw51/Documents/PAMSI/Zadanie7/inc/graf.hh
+	"igraf.h"
+
+1463123511 /home/matiw51/Documents/PAMSI/Zadanie7/inc/igraf.h
+	"lista.hh"
+
+1463126082 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/graf.cpp
+	"graf.hh"
+

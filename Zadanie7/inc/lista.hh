@@ -23,5 +23,6 @@ virtual int wyjmijelement(int pozycja);
 virtual void wyswietl();
 virtual void wypelnij(int ilosc);
 virtual int zwrocrozmiar();
+virtual int przeszukajliste(int elem);
 };
 #endif

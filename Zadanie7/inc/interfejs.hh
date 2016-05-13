@@ -10,5 +10,6 @@ virtual int zwrocrozmiar()=0;
 virtual int wyswietlelement(int)=0;
 virtual void wyswietl()=0;
 virtual void wypelnij(int)=0;
+virtual int przeszukajliste(int)=0;
 };
 #endif

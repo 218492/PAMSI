@@ -1,6 +1,17 @@
 #include "lista.hh"
 #include "iostream"
 using namespace std;
+
+int lista::przeszukajliste(int elem){
+wezel *temp;
+temp=przod;
+for(int i=0;i<(rozmiar_listy); i++){
+if(temp->element==elem){return (1);}
+temp=temp->nastepny;
+}
+return(0);
+}
+
 void lista::dodajelement(int elem, int pozycja){
 wezel *temp = new wezel;
 temp->element=elem;
@@ -86,7 +97,7 @@ temp=przod;
 for(int i=0;i<(rozmiar_listy-(pozycja+1)); i++){
 temp=temp->nastepny;
 }
-cout << "Element na pozycji "<< pozycja << " ma wartosc " << temp->element << endl;
+cout << temp->element << endl;
 return(0);
 }
 
