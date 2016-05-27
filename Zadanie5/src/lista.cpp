@@ -138,7 +138,7 @@ rozmiar_listy=0;
 
 void lista::wyswietlrozmiar(){
 cout << rozmiar_listy << endl;
-};
+}
 
 int lista::wyswietlelement(int pozycja){
 if(pozycja>=rozmiar_listy){

@@ -3,9 +3,9 @@
 using namespace std;
 
 class hasz{
-lista tablicalist[100];
+lista tablicalist[1000];
 public:
-int const rozmiar=100;
+int const rozmiar=1000;
 hasz();
 int funkcjahaszujaca(string klucz);
 int otrzymajelement(string klucz);
