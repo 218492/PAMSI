@@ -50,6 +50,14 @@ rozmiar_listy--;
 rozmiar_listy++;
 }
 
+int lista::wyczyscliste(){
+int x=zwrocrozmiar();
+for(int i=0; i<x; i++){
+usunelement(zwrocrozmiar()-1);
+}
+return(1);
+}
+
 int lista::usunelement(int pozycja){        /*usuwa element*/
 if(pozycja>=rozmiar_listy){
 cout << "Element nie istnieje." << endl;
@@ -85,6 +93,19 @@ cout << rozmiar_listy << endl;
 
 int lista::zwrocrozmiar(){
 return(rozmiar_listy);
+}
+
+int lista::zwrocelement(int pozycja){
+if(pozycja>=rozmiar_listy){
+cout << "Element nie istnieje." << endl;
+return(1);
+}
+wezel *temp;
+temp=przod;
+for(int i=0;i<(rozmiar_listy-(pozycja+1)); i++){
+temp=temp->nastepny;
+}
+return(temp->element);
 }
 
 int lista::wyswietlelement(int pozycja){

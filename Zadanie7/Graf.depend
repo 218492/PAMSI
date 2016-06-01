@@ -1,23 +1,34 @@
 # depslib dependency file v1.0
-1463125892 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/lista.cpp
+1464585610 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/lista.cpp
 	"lista.hh"
 	"iostream"
 
-1463125846 /home/matiw51/Documents/PAMSI/Zadanie7/inc/lista.hh
+1464585610 /home/matiw51/Documents/PAMSI/Zadanie7/inc/lista.hh
 	"interfejs.hh"
 
-1463125892 /home/matiw51/Documents/PAMSI/Zadanie7/inc/interfejs.hh
+1464585610 /home/matiw51/Documents/PAMSI/Zadanie7/inc/interfejs.hh
 
-1463124422 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/main.cpp
+1464658012 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/main.cpp
 	"graf.hh"
+	"stoper.h"
 	"iostream"
+	<cstdlib>
 
-1463123511 /home/matiw51/Documents/PAMSI/Zadanie7/inc/graf.hh
+1464657864 /home/matiw51/Documents/PAMSI/Zadanie7/inc/graf.hh
 	"igraf.h"
 
-1463123511 /home/matiw51/Documents/PAMSI/Zadanie7/inc/igraf.h
+1464587793 /home/matiw51/Documents/PAMSI/Zadanie7/inc/igraf.h
 	"lista.hh"
 
-1463126082 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/graf.cpp
+1464657484 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/graf.cpp
 	"graf.hh"
+	<iostream>
+
+1462231872 source:/home/matiw51/Documents/PAMSI/Zadanie7/src/stoper.cpp
+	"stoper.h"
+	<iostream>
+	<ctime>
+
+1462231872 /home/matiw51/Documents/PAMSI/Zadanie7/inc/stoper.h
+	<ctime>
 

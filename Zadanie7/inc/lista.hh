@@ -17,6 +17,7 @@ public:
 lista();
 virtual void dodajelement(int element, int pozycja);
 virtual int usunelement(int pozycja);
+virtual int zwrocelement(int pozycja);
 virtual int wyswietlelement(int pozycja);
 virtual void wyswietlrozmiar();
 virtual int wyjmijelement(int pozycja);
@@ -24,5 +25,6 @@ virtual void wyswietl();
 virtual void wypelnij(int ilosc);
 virtual int zwrocrozmiar();
 virtual int przeszukajliste(int elem);
+virtual int wyczyscliste();
 };
 #endif
