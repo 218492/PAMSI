@@ -26,4 +26,24 @@ Z wykresu nie da się nic powiedzieć o złożoności tej implementacji.
 Brak sprawozdania.
 Brak kodu.
 
-**Ocena: 2**
+Zadanie uzupelnione
+Zarówno odczyt jak i zapis = O(n).
+
+**Ocena: 3**
+
+# Lab7 - drzewa
+
+brak zad
+Ocena: 2
+
+# Lab8 - grafy (dfs,bfs)
+
+
+brak zad
+Ocena: 2
+
+# Lab9 - grafy (b&b)
+
+
+brak zad
+Ocena: 2
