@@ -14,7 +14,7 @@
 1462231872 /home/matiw51/Documents/PAMSI/Zadanie5/inc/stoper.h
 	<ctime>
 
-1464384852 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/main.cpp
+1464388004 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/main.cpp
 	"lista.h"
 	"hasz.h"
 	"stoper.h"
@@ -40,7 +40,7 @@
 	<iostream>
 	<ctime>
 
-1464381535 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/hasz.cpp
+1464784804 source:/home/matiw51/Documents/PAMSI/Zadanie5/src/hasz.cpp
 	"hasz.h"
 	<string>
 	<iostream>

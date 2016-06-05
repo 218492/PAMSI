@@ -4,7 +4,15 @@
 #include "stos.h"
 using namespace std;
 int main(){
-lista L, L2, L3, L4, L5;
+
+lista l;
+l.dodajelement(0,0);
+l.dodajelement(0,0);
+l.dodajelement(0,0);
+l.dodajelement(0,0);
+l.dodajelement(0,1);
+l.wyswietl();
+/*lista L, L2, L3, L4, L5;
 L.wypelnij(10);
 L.przeszukajizmierz(0);
 L2.wypelnij(100);

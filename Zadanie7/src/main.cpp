@@ -29,4 +29,6 @@ stoper.start();
 graficzek.przeszukajwzdluz(wezel1,wezel2);
 cout << "Przeszukanie wglab: ";
 stoper.stop();
+
+graficzek.sasiedzi(1).wyswietl();
 }

@@ -25,13 +25,13 @@ else if(pozycja<rozmiar_listy){
 wezel *temp2=new wezel;
 wezel *temp3=new wezel;
 temp2=przod;
-for(int i=0;i<(rozmiar_listy-(pozycja+2));i++){ /*pozycja +2, bo szukamy wezla poprzedzajcego*/
+for(int i=0;i<(rozmiar_listy-(pozycja+1));i++){ /*pozycja +1, bo szukamy wezla poprzedzajcego*/
 cout << "3.1" << endl;
 temp2=temp2->nastepny;
 }
 temp3=temp2->nastepny;
 temp2->nastepny=temp;
-temp->nastepny=temp3->nastepny;
+temp->nastepny=temp3;
 }
 else{
 cout << "Poza zakresem" << endl;
@@ -59,7 +59,6 @@ return(temp->element);
 temp2=temp->nastepny;
 temp->nastepny=temp2->nastepny;
 rozmiar_listy--;
-delete temp2;
 return(temp2->element);
 }
 
