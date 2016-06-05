@@ -2,22 +2,6 @@
 #include "iostream"
 using namespace std;
 
-void lista::dodajdroge(int drog){
-droga=drog;
-}
-
-void lista::zerujdroge(){
-droga=0;
-}
-
-int lista::zwrocdroge(){
-droga = 0;
-for(int i=0; i<zwrocrozmiar(); i++){
-droga=droga+zwrocwage(i);
-}
-return(droga);
-}
-
 int lista::przeszukajlistewaga(int waga){
 wezel *temp;
 temp=przod;

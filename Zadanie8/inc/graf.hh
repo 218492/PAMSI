@@ -5,7 +5,7 @@ lista *tablicalist = new lista[100000];
 lista *tablicatras = new lista[100000];
 lista odwiedzonewezly;
 lista doodwiedzenia;
-lista rozwidlenia;
+lista zrobionodlawezla;
 int wezelstartowy;
 int najkrotszadroga=1000000;
 bool znalezionodroge=false;

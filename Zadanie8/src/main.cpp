@@ -4,6 +4,7 @@
 #include <cstdlib>
 using namespace std;
 int main(){
+
 /*
 graf graficzek;
 graficzek.dodajwezel(1);
@@ -44,6 +45,8 @@ srand(time(NULL));
 int iloscwezlow=10000;
 int wezel1=rand()%iloscwezlow+1;
 int wezel2=rand()%iloscwezlow+1;
+//int wezel1=7;
+//int wezel2=5;
 stoper stoper;
 for(int i=1; i<=iloscwezlow; i++){
 graficzek.dodajwezel(i);
@@ -51,13 +54,12 @@ graficzek.dodajwezel(i);
 for(int j=1; j<=(iloscwezlow/2); j++) {
 graficzek.dodajkrawedz(j, j*2, rand()%10+1);
 graficzek.dodajkrawedz(j, (j*2)-1, rand()%10+1);
-graficzek.dodajkrawedz(j+2, (j*2)-2, rand()%10+1);
+graficzek.dodajkrawedz(j+3, (j*2), rand()%10+1);
 }
 cout << "Wezel1 = " << wezel1 << endl;
 cout << "Wezel2 = " << wezel2 << endl;
-
 stoper.start();
-graficzek.wykonajbb(wezel1,wezel2);
+graficzek.wykonajbb(wezel1, wezel2);
 cout << "BranchNBound: ";
 stoper.stop();
 

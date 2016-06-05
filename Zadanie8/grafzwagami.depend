@@ -1,24 +1,24 @@
 # depslib dependency file v1.0
-1465091133 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/graf.cpp
+1465151031 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/graf.cpp
 	"graf.hh"
 	<iostream>
 
-1465087464 /home/matiw51/Documents/PAMSI/Zadanie8/inc/graf.hh
+1465144848 /home/matiw51/Documents/PAMSI/Zadanie8/inc/graf.hh
 	"igraf.h"
 
 1464816833 /home/matiw51/Documents/PAMSI/Zadanie8/inc/igraf.h
 	"lista.hh"
 
-1465084867 /home/matiw51/Documents/PAMSI/Zadanie8/inc/lista.hh
+1465150282 /home/matiw51/Documents/PAMSI/Zadanie8/inc/lista.hh
 	"interfejs.hh"
 
 1464815917 /home/matiw51/Documents/PAMSI/Zadanie8/inc/interfejs.hh
 
-1465084873 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/lista.cpp
+1465150289 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/lista.cpp
 	"lista.hh"
 	"iostream"
 
-1465090750 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/main.cpp
+1465151015 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/main.cpp
 	"graf.hh"
 	"stoper.h"
 	"iostream"
