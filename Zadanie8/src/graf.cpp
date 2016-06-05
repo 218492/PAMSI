@@ -57,17 +57,17 @@ for(int i=0; i<tablicatras[wezel1].zwrocrozmiar();i++){
 tablicatras[wezel2].dodajelementwaga(tablicatras[wezel1].zwrocelement(i), tablicatras[wezel2].zwrocrozmiar(), tablicatras[wezel1].zwrocwage(i));
 }
 if(tablicatras[wezel2].przeszukajliste(wezel1)==-1){tablicatras[wezel2].dodajelementwaga(wezel1, tablicatras[wezel2].zwrocrozmiar(), waga);}
-//cout << "Znaleziono droge :) " << endl;
+cout << "Znaleziono droge :) " << endl;
 droga=tablicatras[wezel2].zwrocdroge();
-//cout << "Dlugosc drogi: " << droga << endl;
+cout << "Dlugosc drogi: " << droga << endl;
 if(droga<najkrotszadroga){
 najkrotszadroga=droga;
-cout << "Obecnie najkrotsza droga to: " << najkrotszadroga << endl;
+}
 cout << "Wezly, ktore trzeba pokonac, zeby osiagnac cel: " << endl;
 tablicatras[wezel2].wyswietl();
-cout << endl;
-}
 tablicatras[wezel2].wyczyscliste();
+cout << "Obecnie najkrotsza droga to: " << najkrotszadroga << endl;
+cout << endl;
 //cout << "Rozwidlenia: " << endl;
 //rozwidlenia.wyswietl();
 bb(rozwidlenia.zwrocelement(rozwidlenia.zwrocrozmiar()-1), wezel2); /// Powinno dodac sie wezel, w ktorym nastapilo rozwidlenie
@@ -78,7 +78,7 @@ k=0;
 for(int i=0; i<ls.zwrocrozmiar(); i++){
 waga=ls.zwrocwage(i);
 wezel=ls.zwrocelement(i);
-if(odwiedzonewezly.przeszukajliste(wezel)==-1&&wezel!=wezel2){/// Nieodwiedzone wezly sa tylko dodawane poki co, do edycji
+if(doodwiedzenia.przeszukajliste(wezel)==-1&&odwiedzonewezly.przeszukajliste(wezel)==-1&&wezel!=wezel2){/// Nieodwiedzone wezly sa tylko dodawane poki co, do edycji
 doodwiedzenia.dodajelementwaga(wezel, waga); // Badamy sasiadow, wrzucamy ich do kolejki przeszukania w kolejnosci od najmniejszej wagi do najwiekszej
 if(k>0){rozwidlenia.dodajelementwaga(wezel1, 0, waga);}
 k++;

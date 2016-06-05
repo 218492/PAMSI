@@ -51,6 +51,7 @@ graficzek.dodajwezel(i);
 for(int j=1; j<=(iloscwezlow/2); j++) {
 graficzek.dodajkrawedz(j, j*2, rand()%10+1);
 graficzek.dodajkrawedz(j, (j*2)-1, rand()%10+1);
+graficzek.dodajkrawedz(j+2, (j*2)-2, rand()%10+1);
 }
 cout << "Wezel1 = " << wezel1 << endl;
 cout << "Wezel2 = " << wezel2 << endl;

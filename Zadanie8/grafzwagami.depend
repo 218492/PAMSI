@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1465089466 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/graf.cpp
+1465091133 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/graf.cpp
 	"graf.hh"
 	<iostream>
 
@@ -18,7 +18,7 @@
 	"lista.hh"
 	"iostream"
 
-1465089784 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/main.cpp
+1465090750 source:/home/matiw51/Documents/PAMSI/Zadanie8/src/main.cpp
 	"graf.hh"
 	"stoper.h"
 	"iostream"
