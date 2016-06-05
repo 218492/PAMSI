@@ -41,12 +41,13 @@ graficzek.dodajkrawedz(8,6,5);
 */
 
 graf graficzek;
+
 srand(time(NULL));
 int iloscwezlow=10000;
 int wezel1=rand()%iloscwezlow+1;
 int wezel2=rand()%iloscwezlow+1;
-//int wezel1=7;
-//int wezel2=5;
+//int wezel1=1;
+//int wezel2=7;
 stoper stoper;
 for(int i=1; i<=iloscwezlow; i++){
 graficzek.dodajwezel(i);
@@ -54,7 +55,6 @@ graficzek.dodajwezel(i);
 for(int j=1; j<=(iloscwezlow/2); j++) {
 graficzek.dodajkrawedz(j, j*2, rand()%10+1);
 graficzek.dodajkrawedz(j, (j*2)-1, rand()%10+1);
-graficzek.dodajkrawedz(j+3, (j*2), rand()%10+1);
 }
 cout << "Wezel1 = " << wezel1 << endl;
 cout << "Wezel2 = " << wezel2 << endl;
@@ -62,5 +62,32 @@ stoper.start();
 graficzek.wykonajbb(wezel1, wezel2);
 cout << "BranchNBound: ";
 stoper.stop();
+
+
+graficzek.dodajwezel(1);
+graficzek.dodajwezel(2);
+graficzek.dodajwezel(3);
+graficzek.dodajwezel(4);
+graficzek.dodajwezel(5);
+graficzek.dodajwezel(6);
+/* DZIALA
+graficzek.dodajkrawedz(1,2,10);
+graficzek.dodajkrawedz(1,5,1);
+graficzek.dodajkrawedz(1,4,8);
+graficzek.dodajkrawedz(4,2,4);
+graficzek.dodajkrawedz(5,2,11);
+graficzek.dodajkrawedz(2,3,1);
+graficzek.wykonajbb(1,3);
+*/
+/* DZIALA
+graficzek.dodajkrawedz(1,2,5);
+graficzek.dodajkrawedz(1,3,1);
+graficzek.dodajkrawedz(3,4,8);
+graficzek.dodajkrawedz(4,2,1);
+graficzek.dodajkrawedz(5,2,1);
+graficzek.dodajkrawedz(4,6,1);
+graficzek.dodajkrawedz(5,6,3);
+graficzek.wykonajbb(1,6);
+*/
 
 }

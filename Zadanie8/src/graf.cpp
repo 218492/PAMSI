@@ -45,53 +45,56 @@ void graf::przygotuj(){odwiedzonewezly.wyczyscliste(); znalezionodroge=false; do
 int graf::bb(const int wezel1, const int wezel2){
 int droga=0;
 int waga;
-int wezel, wezelx;
-odwiedzonewezly.dodajelement(wezel1, odwiedzonewezly.zwrocrozmiar());
+int wezel, wezelx,k,j;
 if(wezel1==wezel2&&doodwiedzenia.zwrocrozmiar()==0){cout << "Najkrotszadroga wynosi: " << najkrotszadroga << endl; return(0);}
 //cout << "Startujemy z wezelka: " << wezel1 << endl;
 if(czyjestsasiadem(wezel1, wezel2)==1){
-droga=0;
-waga=zwazkrawedz(wezel1, wezel2);
-//cout << "Wazymy ostatnia krawedz: " << waga  << endl;
-tablicatras[wezel2].dodajelementwaga(wezel1, tablicatras[wezel2].zwrocrozmiar(), waga);
-for(int i=0; i<tablicatras[wezel1].zwrocrozmiar();i++){
-tablicatras[wezel2].dodajelementwaga(tablicatras[wezel1].zwrocelement(i),tablicatras[wezel2].zwrocrozmiar(), tablicatras[wezel1].zwrocwage(i));
-}
-for(int i=0; i<tablicatras[wezel2].zwrocrozmiar();i++){
-droga=droga+tablicatras[wezel2].zwrocwage(i);
-}
-
-droga=droga+waga;
 cout << "Znaleziono droge :) " << endl;
-cout << "Dlugosc drogi: " << droga << endl;
-if(droga<najkrotszadroga){
-najkrotszadroga=droga;
+drozka=drozka+zwazkrawedz(wezel1, wezel2);
+cout << "Dlugosc drogi: " << drozka << endl;
+if(drozka<najkrotszadroga){
+najkrotszadroga=drozka;
 }
-//cout << "TRASA: " << endl;
-//tablicatras[wezel2].wyswietl();
-//tablicatras[wezel2].wyczyscliste();
+tablicatras[wezel1].wyczyscliste();
+tablicatras[wezel1].dodajelementwaga(wezel1,drozka);
 }
+/// WRZUCANIE ELEMENTOW NA KOLEJKE DOODWIEDZENIA
 lista ls=sasiedzi(wezel1);
 for(int i=0; i<ls.zwrocrozmiar(); i++){
+droga=0;
+for(int j=0; j<tablicatras[wezel1].zwrocrozmiar(); j++){
+droga=droga+tablicatras[wezel1].zwrocwage(j);
+}
 waga=ls.zwrocwage(i);
 wezel=ls.zwrocelement(i);
-if(doodwiedzenia.przeszukajliste(wezel)==-1&&wezel!=wezel2&&odwiedzonewezly.przeszukajliste(wezel)==-1){/// Nieodwiedzone wezly sa tylko dodawane poki co, do edycji
-doodwiedzenia.dodajelementwaga(wezel, waga); // Badamy sasiadow, wrzucamy ich do kolejki przeszukania w kolejnosci od najmniejszej wagi do najwiekszej
+if(doodwiedzenia.przeszukajliste(wezel)==-1&&odwiedzonewezly.przeszukajliste(wezel)==-1){k=1000000;}
+else{k=0;}
+droga=droga+waga;
+if(wezel!=wezel2&&wezel!=wezel1&&(((droga<doodwiedzenia.przeszukajliste(wezel))&&droga<odwiedzonewezly.przeszukajliste(wezel))||droga<k)){
+doodwiedzenia.dodajelementwaga(wezel, droga); // Badamy sasiadow, wrzucamy ich do kolejki przeszukania w kolejnosci od najmniejszej wagi do najwiekszej
+//cout << "WEZEL: " << wezel << " DROGA: " << droga << " WAGA: " << waga << endl;
 }
 }
-//cout << "Tablica tras2: " << endl;
-//tablicatras[wezel1].wyswietl();
 if(doodwiedzenia.zwrocrozmiar()==0){cout << "Najkrotsza droga wynosi: " << najkrotszadroga << endl; return(0);}
+/// SCIAGANIE ELEMENTU Z KOLEJKI DOODWIEDZENIA
 waga=doodwiedzenia.zwrocwage(doodwiedzenia.zwrocrozmiar()-1);
-//cout << "Waga: " << waga << endl;
+//cout << "Waga za chwile odwiedzonego wezla: " << waga << endl;
+drozka=waga;
 wezel=doodwiedzenia.usunelement(doodwiedzenia.zwrocrozmiar()-1); // Bierzemy element do zwiedzenia
-//cout << "Odwiedzamy wezel: " << wezel << endl;
+if(waga>najkrotszadroga){cout << "Nie szukamy dalej, wszystkie dalsze drogi sa dluzsze niz: " << najkrotszadroga << endl;}
+else{
+if(czyjestsasiadem(wezel, wezel2)==0){
+//cout << "Nastepnie odwiedzamy wezel: " << wezel << endl;
+/// PROBLEMATYCZNE MIEJSCE, ZROBIONE DLA POPRZEDNIEJ IDEI, ALE JAKOŚ DZIAŁA
 if(czyjestsasiadem(wezel1, wezel)){
 //cout << "sprawdzenie1" << endl;
+//cout << "WAGA: " << waga << " WEZEL: " << wezel <<  endl;
 tablicatras[wezel].dodajelementwaga(wezel1, tablicatras[wezel].zwrocrozmiar(), zwazkrawedz(wezel, wezel1));
 for(int i=0; i<tablicatras[wezel1].zwrocrozmiar();i++){
 tablicatras[wezel].dodajelementwaga(tablicatras[wezel1].zwrocelement(i),tablicatras[wezel].zwrocrozmiar(), tablicatras[wezel1].zwrocwage(i));
 }
+int WAGA2=tablicatras[wezel].zwrocwage(0);
+//cout << "WAGA2: " << WAGA2 << endl;
 }
 else{
 //cout << "sprawdzenie2" << endl;
@@ -106,14 +109,18 @@ for(int i=0; i<tablicatras[wezelx].zwrocrozmiar();i++){
 tablicatras[wezel].dodajelementwaga(tablicatras[wezelx].zwrocelement(i),tablicatras[wezel].zwrocrozmiar(), tablicatras[wezelx].zwrocwage(i));
 }
 }
+}
+/// KONIEC PROBLEMATYCZNEGO MIEJSCA
+odwiedzonewezly.dodajelementwaga(wezel1, waga);
 bb(wezel, wezel2);
+}
 }
 
 int graf::wykonajbb(const int wezel1, const int wezel2){
 przygotuj();
 if(czyjestsasiadem(wezel1, wezel2)){cout << "Najkrotsza droga wynosi: " << zwazkrawedz(wezel1, wezel2); return(0);}
+wezelstartowy=wezel1;
 bb(wezel1, wezel2);
 return(0);
 }
-
 
