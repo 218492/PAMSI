@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1465558732 source:/home/matiw51/Documents/PAMSI/Projekt/src/kik.cpp
+	"kik.h"
+	<iostream>
+
+1465513623 source:/home/matiw51/Documents/PAMSI/Projekt/src/main.cpp
+	<iostream>
+	"kik.h"
+
+1465551982 /home/matiw51/Documents/PAMSI/Projekt/inc/kik.h
+	<iostream>
+
