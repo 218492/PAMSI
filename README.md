@@ -8,4 +8,4 @@ Zadanie 4 to quicksort.
 Zadanie 5 to tablica haszująca.  
 Zadanie 6 to drzewo(nie wykonane).  
 Zadanie 7 to graf(DFS i BFS).  
-Zadanie 7 to graf(B&B).  
+Zadanie 8 to graf(B&B).  
