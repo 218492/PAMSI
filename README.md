@@ -7,4 +7,5 @@ Zadanie 3 to lista oraz kolejka i stos zbudowane w oparciu o listę.
 Zadanie 4 to quicksort.  
 Zadanie 5 to tablica haszująca.  
 Zadanie 6 to drzewo(nie wykonane).  
-Zadanie 7 to graf(nie wykonane).  
+Zadanie 7 to graf(DFS i BFS).  
+Zadanie 7 to graf(B&B).  
